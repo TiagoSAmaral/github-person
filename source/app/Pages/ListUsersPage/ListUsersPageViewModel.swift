@@ -53,7 +53,6 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
     }
     
     func searchUser(by name: String?) {
-        controller?.startLoading()
         network?.search(with: name, handler: { result in
             DispatchQueue.main.async { [weak self] in
                 

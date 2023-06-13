@@ -45,11 +45,12 @@ disabled_rules:
   - unused_capture_list
   - vertical_whitespace_between_cases
 included: # paths to include during linting. `--path` is ignored if present.
-  - source/
+  - source/app
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
   - source/app/supportfiles
+  - source/test
 analyzer_rules:
   - unused_declaration
   - unused_import
@@ -110,6 +111,7 @@ identifier_name:
     - qa
     - id
     - top
+    - row
 return_arrow_whitespace: error
 legacy_constructor: error
 legacy_constant: error

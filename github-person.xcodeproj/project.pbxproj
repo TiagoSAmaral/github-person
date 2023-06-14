@@ -443,6 +443,13 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		CFB602872A3A12D90025310C /* ComponentTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ComponentTests;
+			sourceTree = "<group>";
+		};
 		CFD3A6A323DA302E00EB6D4D /* source */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +546,7 @@
 		CFEAE3D82A396CFF006F1A96 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CFB602872A3A12D90025310C /* ComponentTests */,
 				CFEAE3E02A397822006F1A96 /* FactoriesTests */,
 				CFEAE3D92A396D16006F1A96 /* Networktests */,
 			);

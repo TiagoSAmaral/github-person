@@ -41,20 +41,7 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
         params.since = 0
         params.layout = .userListItem
         
-        network?.makeListUserRequest(with: params) { result in
-            DispatchQueue.main.async { [weak self] in
-                
-                switch result {
-                case .success(let users):
-                    self?.updateView(with: users)
-                    self?.controller?.stopLoading(onFinish: nil)
-                case .failure(let error):
-                    self?.controller?.stopLoading {
-                        self?.controller?.presentAlert(with: nil, and: error.message, handler: nil)
-                    }
-                }
-            }
-        }
+        network?.makeListUserRequest(with: params, handler: handlerRequestWith)
     }
     
     func searchUser(by name: String?) {
@@ -64,17 +51,19 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
         params.since = .zero
         params.layout = .userListItem
         
-        network?.makSearchRequest(with: params) { result in
-            DispatchQueue.main.async { [weak self] in
-                
-                switch result {
-                case .success(let response):
-                    self?.controller?.stopLoading(onFinish: nil)
-                    self?.updateView(with: response)
-                case .failure(let error):
-                    self?.controller?.stopLoading {
-                        self?.controller?.presentAlert(with: nil, and: error.message, handler: nil)
-                    }
+        network?.makSearchRequest(with: params, handler: handlerRequestWith)
+    }
+    
+    lazy var handlerRequestWith: (ResultUser) -> Void = { [weak self] result in
+        DispatchQueue.main.async {
+            
+            switch result {
+            case .success(let response):
+                self?.controller?.stopLoading(onFinish: nil)
+                self?.updateView(with: response)
+            case .failure(let error):
+                self?.controller?.stopLoading {
+                    self?.controller?.presentAlert(with: nil, and: error.message, handler: nil)
                 }
             }
         }

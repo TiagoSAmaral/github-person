@@ -9,20 +9,32 @@
 import Foundation
 import Alamofire
 
+class APIParams {
+    var urlPath: URL?
+    var method: HTTPMethod?
+    var headers: HTTPHeaders?
+}
+
 protocol NetworkConectable: AnyObject {
-    func networkRequest<T: Codable>(data: RequestApi?, resultType: T.Type, handler: ((Result<T, NetworkError>) -> Void)?)
+    func networkRequest<T: Codable>(params: APIParams?, resultType: T.Type, handler: ((Result<T, NetworkError>) -> Void)?)
 }
 
 extension NetworkConectable {
     
-    func networkRequest<T: Decodable>(data: RequestApi?, resultType: T.Type, handler: ((Result<T, NetworkError>) -> Void)?) {
+    func networkRequest<T: Codable>(params: APIParams?, resultType: T.Type, handler: ((Result<T, NetworkError>) -> Void)?) {
         
-        guard let data = data else {
+        guard let urlPath = params?.urlPath,
+              let method = params?.method,
+              let headers = params?.headers else {
             handler?(.failure(NetworkError.notDefined(text: LocalizedText.with(tagName: .networkErrorNotDefined))))
             return
         }
         
-        AF.request(data.urlPath, method: data.method, headers: data.headers, requestModifier: { $0.timeoutInterval = 15; $0.cachePolicy = .reloadRevalidatingCacheData }).responseDecodable(of: resultType.self) { response in
+        let request = AF.request(urlPath, method: method,
+                   headers: headers,
+                   requestModifier: { $0.timeoutInterval = 15; $0.cachePolicy = .reloadRevalidatingCacheData })
+            
+        request.responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let result):
                 handler?(.success(result))

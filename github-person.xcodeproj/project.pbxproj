@@ -122,6 +122,8 @@
 		CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */; };
 		CFEAE3DD2A396FCD006F1A96 /* ApiRoutesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */; };
 		CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */; };
+		CFEAE3E22A397A74006F1A96 /* CardFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */; };
+		CFEAE3E62A397E05006F1A96 /* FakeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +202,8 @@
 		CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeaderMakerTests.swift; sourceTree = "<group>"; };
 		CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRoutesTest.swift; sourceTree = "<group>"; };
 		CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactoryTests.swift; sourceTree = "<group>"; };
+		CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserModel.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -494,6 +498,7 @@
 		CFD3A6BD23DA30EF00EB6D4D /* test */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAE3E32A397D72006F1A96 /* tools */,
 				CFEAE3D72A396CF1006F1A96 /* apptests */,
 				CF24569923E4C55B00A1968D /* info.plist */,
 			);
@@ -528,6 +533,7 @@
 		CFEAE3D82A396CFF006F1A96 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAE3E02A397822006F1A96 /* FactoriesTests */,
 				CFEAE3D92A396D16006F1A96 /* Networktests */,
 			);
 			path = Shared;
@@ -541,6 +547,22 @@
 				CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */,
 			);
 			path = Networktests;
+			sourceTree = "<group>";
+		};
+		CFEAE3E02A397822006F1A96 /* FactoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */,
+			);
+			path = FactoriesTests;
+			sourceTree = "<group>";
+		};
+		CFEAE3E32A397D72006F1A96 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 		CFF2EA0E2A0F256D00709168 /* Extensions */ = {
@@ -724,6 +746,7 @@
 				CFEAE3A72A396C03006F1A96 /* CardFactory.swift in Sources */,
 				CFEAE3A52A396C03006F1A96 /* SearchResult.swift in Sources */,
 				CFEAE3C12A396C03006F1A96 /* Coordinator.swift in Sources */,
+				CFEAE3E62A397E05006F1A96 /* FakeUserModel.swift in Sources */,
 				CFEAE3B02A396C03006F1A96 /* CustomCell.swift in Sources */,
 				CFEAE3A92A396C03006F1A96 /* LoadingViewController.swift in Sources */,
 				CFEAE3A82A396C03006F1A96 /* UserDetailPageFactory.swift in Sources */,
@@ -737,6 +760,7 @@
 				CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */,
 				CFEAE3C92A396C03006F1A96 /* ViewModelHandlerEventsControllerDelegate.swift in Sources */,
 				CFEAE3B62A396C03006F1A96 /* CardModelHandler.swift in Sources */,
+				CFEAE3E22A397A74006F1A96 /* CardFactoryTests.swift in Sources */,
 				CFEAE3A42A396C03006F1A96 /* NetworkHeaderMaker.swift in Sources */,
 				CFEAE3AE2A396C03006F1A96 /* LocalizedText.swift in Sources */,
 				CFEAE3C72A396C03006F1A96 /* RequestParams.swift in Sources */,

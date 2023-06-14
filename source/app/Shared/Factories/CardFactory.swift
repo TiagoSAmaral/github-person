@@ -9,22 +9,24 @@
 import UIKit
 
 protocol CardFactory {
-    func makeCard(from item: Model) -> Card?
+    func makeCard(from item: Model?) -> Card?
 }
 
 class CardMaker: CardFactory {
     
-    func makeCard(from item: Model) -> Card? {
+    func makeCard(from item: Model?) -> Card? {
         
-        switch item.layout {
+        guard let item = item, let layout = item.layout else {
+            return nil
+        }
+        
+        switch layout {
         case .userListItem:
             return CardMaker.make(with: item, classType: CardUserListItemView.self)
         case .repoListItem:
             return CardMaker.make(with: item, classType: CardRepoListItemView.self)
         case .userInfo:
             return CardMaker.make(with: item, classType: CardUserProfileView.self)
-        case .none:
-            return nil
         }
     }
     

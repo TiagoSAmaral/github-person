@@ -36,7 +36,12 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
     }
     
     func requestUsers() {
-        network?.requestListUser(page: 0, params: nil, handler: { result in
+
+        let params = RequestParams()
+        params.since = 0
+        params.layout = .userListItem
+        
+        network?.makeListUserRequest(with: params) { result in
             DispatchQueue.main.async { [weak self] in
                 
                 switch result {
@@ -49,11 +54,17 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
                     }
                 }
             }
-        })
+        }
     }
     
     func searchUser(by name: String?) {
-        network?.search(with: name, handler: { result in
+        
+        let params = RequestParams()
+        params.userName = name
+        params.since = .zero
+        params.layout = .userListItem
+        
+        network?.makSearchRequest(with: params) { result in
             DispatchQueue.main.async { [weak self] in
                 
                 switch result {
@@ -66,7 +77,7 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
                     }
                 }
             }
-        })
+        }
     }
     
     func updateView(with value: [Model]?) {
@@ -97,7 +108,7 @@ class ListUsersPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
         guard let items = items else {
             return nil
         }
-        var item = items[indexPath.row]
+        let item = items[indexPath.row]
         item.action = goToUserDetail
         return item
     }

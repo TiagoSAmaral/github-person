@@ -45,8 +45,13 @@ class ListReposPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
         guard let valueToRequest = valueToRequest as? UserDetailProfile, let login = valueToRequest.login  else {
             return
         }
-        
-        network?.requestUserRepos(name: login, page: 0, params: nil) { result in
+    
+        let params = RequestParams()
+        params.userName = login
+        params.since = 0
+        params.layout = .repoListItem
+    
+        network?.makeListRepositoriesRequest(with: params) { result in
             DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success(let users):

@@ -8,49 +8,77 @@
 
 import Foundation
 
-struct ApiRoutes {
+class ApiRoutes: URLPathBuildable {
     
-    enum Paths {
-        case getListUser(page: Int?)
-        case getSearchUser(text: String?)
-        case getListRepoFromUser(text: String?, page: Int?)
-        case getUserProfile(text: String?)
-    }
-    
-    static let shared: ApiRoutes = ApiRoutes()
-    
-    private(set) var baseUrl: String
+    private var product: URLComponents?
+    private var perPage: String = "100"
     
     init() {
-        baseUrl = Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as? String ?? ""
+        reset()
     }
     
-    func path(_ path: Paths) -> String {
-        switch path {
-        case .getListUser(let page):
-            
-            return baseUrl + "/users?since=\(page ?? 0)&per_page=100"
-            
-        case .getSearchUser(let text):
-            
-            guard let text = text else {
-                return ""
-            }
-            
-            return baseUrl + "/search/users?q=\(text)"
-            
-        case .getUserProfile(let text):
-            guard let text = text else {
-                return ""
-            }
-            
-            return baseUrl + "/users/\(text)"
-            
-        case .getListRepoFromUser(let text, let page):
-            guard let text = text else {
-                return ""
-            }
-            return baseUrl + "/users/\(text)/repos"
+    func reset() {
+        product = URLComponents(string: "https://api.github.com")
+    }
+    
+    func makeUrlListUsers(with params: RequestParams?) -> URL? {
+        
+        guard let params = params else {
+            return nil
         }
+        
+        reset()
+        
+        product?.path = "/users"
+        product?.queryItems?.append(contentsOf: [
+            URLQueryItem(name: "since", value: "\(params.since ?? 0)"),
+            URLQueryItem(name: "per_page", value: perPage),
+        ]
+        )
+        
+        return product?.url
+    }
+    
+    func makeUrlSearch(with params: RequestParams?) -> URL? {
+        
+        guard let params = params else {
+            return nil
+        }
+        
+        reset()
+        
+        product?.path = "/search/users"
+        product?.queryItems?.append(URLQueryItem(name: "q", value: params.userName))
+        
+        return product?.url
+    }
+    
+    func makeUrlUserDetail(with params: RequestParams?) -> URL? {
+        
+        reset()
+        
+        guard let params = params else {
+            return nil
+        }
+        product?.path = "/users/\(params.userName ?? "")"
+        return product?.url
+    }
+
+    func makeUrlRepositories(with params: RequestParams?) -> URL? {
+        
+        guard let params = params else {
+            return nil
+        }
+        
+        reset()
+        
+        product?.path = "/users/\(params.userName ?? "")/repos"
+        product?.queryItems?.append(contentsOf: [
+                URLQueryItem(name: "since", value: "0"),
+                URLQueryItem(name: "per_page", value: perPage),
+            ]
+        )
+        
+        return product?.url
     }
 }

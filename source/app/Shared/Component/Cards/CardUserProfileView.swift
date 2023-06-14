@@ -61,8 +61,9 @@ class CardUserProfileView: UIView, Card, CardTouch {
     
     lazy var nameLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24.0, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)
         label.textColor = ColorAsset.titleColor
+        label.numberOfLines = .zero
         label.height(44)
         return label
     }()

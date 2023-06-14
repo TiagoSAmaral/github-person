@@ -22,6 +22,7 @@ final class CardRepoListItemViewTests: XCTestCase {
         let model = MockerContentProvider().loadRepoList()?[5]
         card.load(model: model)
         card.defineLayout(with: canvasView)
+        card.baseView.layer.borderColor = UIColor.darkGray.cgColor
         assertSnapshots(matching: canvasView, as: [.image(traits: .init(userInterfaceStyle: .dark))], record: isRecording)
     }
     

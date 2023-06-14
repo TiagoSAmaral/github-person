@@ -124,6 +124,7 @@
 		CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */; };
 		CFEAE3E22A397A74006F1A96 /* CardFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */; };
 		CFEAE3E62A397E05006F1A96 /* FakeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */; };
+		CFEAE3E82A397F0F006F1A96 /* AlertViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +205,7 @@
 		CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
 		CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactoryTests.swift; sourceTree = "<group>"; };
 		CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserModel.swift; sourceTree = "<group>"; };
+		CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewFactoryTests.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -553,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */,
+				CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */,
 			);
 			path = FactoriesTests;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				CFEAE3A52A396C03006F1A96 /* SearchResult.swift in Sources */,
 				CFEAE3C12A396C03006F1A96 /* Coordinator.swift in Sources */,
 				CFEAE3E62A397E05006F1A96 /* FakeUserModel.swift in Sources */,
+				CFEAE3E82A397F0F006F1A96 /* AlertViewFactoryTests.swift in Sources */,
 				CFEAE3B02A396C03006F1A96 /* CustomCell.swift in Sources */,
 				CFEAE3A92A396C03006F1A96 /* LoadingViewController.swift in Sources */,
 				CFEAE3A82A396C03006F1A96 /* UserDetailPageFactory.swift in Sources */,

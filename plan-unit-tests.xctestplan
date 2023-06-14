@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "FA917FE3-2530-40D8-ACCF-1C5DF5D0B7BD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:github-person.xcodeproj",
+          "identifier" : "CF9601AD23DA2A1E00916EF1",
+          "name" : "github-person"
+        }
+      ]
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:github-person.xcodeproj",
+        "identifier" : "CF6414DE23E4C1CF009C7A9E",
+        "name" : "github-personTests"
+      }
+    }
+  ],
+  "version" : 1
+}

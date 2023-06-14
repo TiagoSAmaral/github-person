@@ -77,7 +77,7 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     }
     
     func registerTableViewCell() {
-        tableView?.register(GenericTableViewCell.self, forCellReuseIdentifier: GenericTableViewCell.identifier)
+        tableView?.register(GenericTableViewCell.self, forCellReuseIdentifier: GenericTableViewCell.classIdentifier)
     }
     
     func reloadView() {
@@ -97,7 +97,7 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.identifier,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.classIdentifier,
                                                        for: indexPath) as? GenericTableViewCell,
               let model = controller?.dataHandler?.dataBy(indexPath: indexPath) else {
             return UITableViewCell()

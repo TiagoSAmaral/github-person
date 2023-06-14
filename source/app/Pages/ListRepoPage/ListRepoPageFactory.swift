@@ -15,6 +15,7 @@ class ListReposPageFactory: FactoryPage {
         let controller = ListReposPageController()
         let headerMaker = NetworkHeaderMaker()
         let network = NetworkUserInfo(headerFactory: headerMaker)
+        network.routesMarker = ApiRoutes()
         let viewFactory = ListFactoryView(controller: controller)
         let viewModel = ListReposPageViewModel(controller: controller,
                                                network: network,

@@ -17,6 +17,7 @@ class UserDetailPageFactory: FactoryPage {
         let viewFactory = ListFactoryView(controller: controller)
         let headerFactory = NetworkHeaderMaker()
         let network = NetworkUserInfo(headerFactory: headerFactory)
+        network.routesMarker = ApiRoutes()
         
         viewModel.userDetailNetwork = network
         viewModel.valueToRequest = model

@@ -16,10 +16,12 @@ class ListUsersPageFactory: FactoryPage {
         let searchBarController = SearchBarFactory.makeSearch()
         let headerMaker = NetworkHeaderMaker()
         let network = NetworkUserInfo(headerFactory: headerMaker)
+        network.routesMarker = ApiRoutes()
         let viewFactory = ListFactoryView(controller: controller)
         let viewModel = ListUsersPageViewModel(controller: controller,
                                                network: network,
                                                coordinator: coordinator)
+        
         viewFactory.cardFactory = CardMaker()
         coordinator?.rootViewControler = controller
         controller.viewModel = viewModel

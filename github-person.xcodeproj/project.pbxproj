@@ -125,6 +125,8 @@
 		CFEAE3E22A397A74006F1A96 /* CardFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */; };
 		CFEAE3E62A397E05006F1A96 /* FakeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */; };
 		CFEAE3E82A397F0F006F1A96 /* AlertViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */; };
+		CFEAE3EA2A397F5D006F1A96 /* ListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3E92A397F5D006F1A96 /* ListViewTests.swift */; };
+		CFEAE3ED2A397FA5006F1A96 /* ControllerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3EC2A397FA5006F1A96 /* ControllerFake.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +208,8 @@
 		CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactoryTests.swift; sourceTree = "<group>"; };
 		CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserModel.swift; sourceTree = "<group>"; };
 		CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewFactoryTests.swift; sourceTree = "<group>"; };
+		CFEAE3E92A397F5D006F1A96 /* ListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTests.swift; sourceTree = "<group>"; };
+		CFEAE3EC2A397FA5006F1A96 /* ControllerFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFake.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -554,8 +558,10 @@
 		CFEAE3E02A397822006F1A96 /* FactoriesTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAE3EB2A397F87006F1A96 /* ListViewToolsTests */,
 				CFEAE3E12A397A74006F1A96 /* CardFactoryTests.swift */,
 				CFEAE3E72A397F0F006F1A96 /* AlertViewFactoryTests.swift */,
+				CFEAE3E92A397F5D006F1A96 /* ListViewTests.swift */,
 			);
 			path = FactoriesTests;
 			sourceTree = "<group>";
@@ -566,6 +572,14 @@
 				CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */,
 			);
 			path = tools;
+			sourceTree = "<group>";
+		};
+		CFEAE3EB2A397F87006F1A96 /* ListViewToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3EC2A397FA5006F1A96 /* ControllerFake.swift */,
+			);
+			path = ListViewToolsTests;
 			sourceTree = "<group>";
 		};
 		CFF2EA0E2A0F256D00709168 /* Extensions */ = {
@@ -728,6 +742,7 @@
 				CFEAE3D32A396C03006F1A96 /* UserDetailPageViewModel.swift in Sources */,
 				CFEAE3A22A396C03006F1A96 /* ListRepoPageController.swift in Sources */,
 				CFEAE3BA2A396C03006F1A96 /* CardTouch.swift in Sources */,
+				CFEAE3ED2A397FA5006F1A96 /* ControllerFake.swift in Sources */,
 				CFEAE3B52A396C03006F1A96 /* Constraints.swift in Sources */,
 				CFEAE3AC2A396C03006F1A96 /* NavigationController.swift in Sources */,
 				CFEAE3BE2A396C03006F1A96 /* ListRepoPageCoordinator.swift in Sources */,
@@ -754,6 +769,7 @@
 				CFEAE3B02A396C03006F1A96 /* CustomCell.swift in Sources */,
 				CFEAE3A92A396C03006F1A96 /* LoadingViewController.swift in Sources */,
 				CFEAE3A82A396C03006F1A96 /* UserDetailPageFactory.swift in Sources */,
+				CFEAE3EA2A397F5D006F1A96 /* ListViewTests.swift in Sources */,
 				CFEAE3AA2A396C03006F1A96 /* NetworkUserInfo.swift in Sources */,
 				CFEAE3D42A396C03006F1A96 /* AlertPresentable.swift in Sources */,
 				CFEAE3C62A396C03006F1A96 /* ListResposPageViewModel.swift in Sources */,

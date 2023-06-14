@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Controller: AnyObject {
+protocol Controller where Self: UIViewController {
     var view: UIView! { get set }
     var dataHandler: ListDataHandler? { get }
 }
@@ -23,7 +23,7 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     weak var controller: Controller?
     var cardFactory: CardFactory?
     var refreshControl: UIRefreshControl?
-    private var tableView: UITableView?
+    var tableView: UITableView?
     
     init(controller: Controller? = nil) {
         super.init()
@@ -38,33 +38,11 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
         makeView()
     }
     
-    func makeView() {
-        guard let controller = controller,
-              let tableView = tableView else {
-            return
-        }
-        controller.view.addSubview(tableView)
-        
-        tableView.edgeToSuperView()
-    }
-    
     func makeTableView() {
         guard tableView == nil else {
             return
         }
         tableView = UITableView(frame: .zero, style: .plain)
-    }
-    
-    func makePullToRefresh() {
-        let refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: LocalizedText.with(tagName: .pullToRefreshText))
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-       tableView?.addSubview(refreshControl) // not required when using UITableViewController
-        self.refreshControl = refreshControl
-    }
-    
-    @objc func refresh() {
-        controller?.dataHandler?.updateContent()
     }
     
     func setupTableView() {
@@ -78,6 +56,28 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     
     func registerTableViewCell() {
         tableView?.register(GenericTableViewCell.self, forCellReuseIdentifier: GenericTableViewCell.classIdentifier)
+    }
+    
+    func makePullToRefresh() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: LocalizedText.with(tagName: .pullToRefreshText))
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+       tableView?.addSubview(refreshControl)
+        self.refreshControl = refreshControl
+    }
+    
+    @objc func refresh() {
+        controller?.dataHandler?.updateContent()
+    }
+    
+    func makeView() {
+        guard let controller = controller,
+              let tableView = tableView else {
+            return
+        }
+        controller.view.addSubview(tableView)
+        
+        tableView.edgeToSuperView()
     }
     
     func reloadView() {

@@ -61,6 +61,14 @@
 		CFB6028D2A3A14E40025310C /* NavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6028C2A3A14E40025310C /* NavigationControllerTests.swift */; };
 		CFB602902A3A17660025310C /* LoadingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6028F2A3A17660025310C /* LoadingViewControllerTests.swift */; };
 		CFB602932A3A18D90025310C /* UISearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB602922A3A18D90025310C /* UISearchTests.swift */; };
+		CFB602962A3A1A0B0025310C /* CardUserListItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB602952A3A1A0B0025310C /* CardUserListItemViewTests.swift */; };
+		CFB602982A3A1A1D0025310C /* CardRepoListItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB602972A3A1A1D0025310C /* CardRepoListItemViewTests.swift */; };
+		CFB6029A2A3A1A2A0025310C /* CardUserProfileViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB602992A3A1A2A0025310C /* CardUserProfileViewTests.swift */; };
+		CFB6029D2A3A1AE80025310C /* MockContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6029C2A3A1AE80025310C /* MockContentProvider.swift */; };
+		CFB6029F2A3A1C670025310C /* ListUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB6029E2A3A1C670025310C /* ListUsers.json */; };
+		CFB602A12A3A1CBF0025310C /* UserDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB602A02A3A1CBF0025310C /* UserDetail.json */; };
+		CFB602A32A3A1D550025310C /* ListRepo.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB602A22A3A1D540025310C /* ListRepo.json */; };
+		CFB602A52A3A1D930025310C /* SearchResult.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB602A42A3A1D930025310C /* SearchResult.json */; };
 		CFD3A6B723DA308A00EB6D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3A6AC23DA308900EB6D4D /* AppDelegate.swift */; };
 		CFD3A6BB23DA308A00EB6D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD3A6B423DA308A00EB6D4D /* Assets.xcassets */; };
 		CFD3A6D723DA41FE00EB6D4D /* Localizable-pt-BR.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFD3A6CF23DA3F9700EB6D4D /* Localizable-pt-BR.strings */; };
@@ -201,6 +209,14 @@
 		CFB6028C2A3A14E40025310C /* NavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerTests.swift; sourceTree = "<group>"; };
 		CFB6028F2A3A17660025310C /* LoadingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewControllerTests.swift; sourceTree = "<group>"; };
 		CFB602922A3A18D90025310C /* UISearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchTests.swift; sourceTree = "<group>"; };
+		CFB602952A3A1A0B0025310C /* CardUserListItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserListItemViewTests.swift; sourceTree = "<group>"; };
+		CFB602972A3A1A1D0025310C /* CardRepoListItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepoListItemViewTests.swift; sourceTree = "<group>"; };
+		CFB602992A3A1A2A0025310C /* CardUserProfileViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserProfileViewTests.swift; sourceTree = "<group>"; };
+		CFB6029C2A3A1AE80025310C /* MockContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentProvider.swift; sourceTree = "<group>"; };
+		CFB6029E2A3A1C670025310C /* ListUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListUsers.json; sourceTree = "<group>"; };
+		CFB602A02A3A1CBF0025310C /* UserDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserDetail.json; sourceTree = "<group>"; };
+		CFB602A22A3A1D540025310C /* ListRepo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListRepo.json; sourceTree = "<group>"; };
+		CFB602A42A3A1D930025310C /* SearchResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchResult.json; sourceTree = "<group>"; };
 		CFD3A6AC23DA308900EB6D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD3A6B223DA308A00EB6D4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFD3A6B423DA308A00EB6D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -454,6 +470,7 @@
 		CFB602872A3A12D90025310C /* ComponentTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFB602942A3A19ED0025310C /* CardsTests */,
 				CFB602912A3A18C30025310C /* UISearchTests */,
 				CFB6028E2A3A17590025310C /* LoadingViewControllerTests */,
 				CFB6028B2A3A14CA0025310C /* NavigationControllerTests */,
@@ -483,6 +500,27 @@
 				CFB602922A3A18D90025310C /* UISearchTests.swift */,
 			);
 			path = UISearchTests;
+			sourceTree = "<group>";
+		};
+		CFB602942A3A19ED0025310C /* CardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB602952A3A1A0B0025310C /* CardUserListItemViewTests.swift */,
+				CFB602972A3A1A1D0025310C /* CardRepoListItemViewTests.swift */,
+				CFB602992A3A1A2A0025310C /* CardUserProfileViewTests.swift */,
+			);
+			path = CardsTests;
+			sourceTree = "<group>";
+		};
+		CFB6029B2A3A1ACE0025310C /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6029E2A3A1C670025310C /* ListUsers.json */,
+				CFB602A02A3A1CBF0025310C /* UserDetail.json */,
+				CFB602A22A3A1D540025310C /* ListRepo.json */,
+				CFB602A42A3A1D930025310C /* SearchResult.json */,
+			);
+			path = JSONs;
 			sourceTree = "<group>";
 		};
 		CFD3A6A323DA302E00EB6D4D /* source */ = {
@@ -612,7 +650,9 @@
 		CFEAE3E32A397D72006F1A96 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				CFB6029B2A3A1ACE0025310C /* JSONs */,
 				CFEAE3E42A397D9B006F1A96 /* FakeUserModel.swift */,
+				CFB6029C2A3A1AE80025310C /* MockContentProvider.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -739,6 +779,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB602A12A3A1CBF0025310C /* UserDetail.json in Resources */,
+				CFB6029F2A3A1C670025310C /* ListUsers.json in Resources */,
+				CFB602A52A3A1D930025310C /* SearchResult.json in Resources */,
+				CFB602A32A3A1D550025310C /* ListRepo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +872,7 @@
 				CFEAE3C92A396C03006F1A96 /* ViewModelHandlerEventsControllerDelegate.swift in Sources */,
 				CFEAE3B62A396C03006F1A96 /* CardModelHandler.swift in Sources */,
 				CFEAE3E22A397A74006F1A96 /* CardFactoryTests.swift in Sources */,
+				CFB602962A3A1A0B0025310C /* CardUserListItemViewTests.swift in Sources */,
 				CFEAE3A42A396C03006F1A96 /* NetworkHeaderMaker.swift in Sources */,
 				CFEAE3AE2A396C03006F1A96 /* LocalizedText.swift in Sources */,
 				CFEAE3C72A396C03006F1A96 /* RequestParams.swift in Sources */,
@@ -835,6 +880,7 @@
 				CFEAE3BD2A396C03006F1A96 /* Card.swift in Sources */,
 				CFEAE3D62A396C03006F1A96 /* ListUsersPageController.swift in Sources */,
 				CFB602932A3A18D90025310C /* UISearchTests.swift in Sources */,
+				CFB602982A3A1A1D0025310C /* CardRepoListItemViewTests.swift in Sources */,
 				CFEAE3AD2A396C03006F1A96 /* RepoListItem.swift in Sources */,
 				CFEAE3D22A396C03006F1A96 /* LayoutView.swift in Sources */,
 				CFEAE3B32A396C03006F1A96 /* Model.swift in Sources */,
@@ -843,7 +889,9 @@
 				CFEAE3BF2A396C03006F1A96 /* ListRepoPageFactory.swift in Sources */,
 				CFEAE3AF2A396C03006F1A96 /* UserDetailPageController.swift in Sources */,
 				CFEAE3CE2A396C03006F1A96 /* Identifier.swift in Sources */,
+				CFB6029D2A3A1AE80025310C /* MockContentProvider.swift in Sources */,
 				CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */,
+				CFB6029A2A3A1A2A0025310C /* CardUserProfileViewTests.swift in Sources */,
 				CFEAE3C22A396C03006F1A96 /* UserDetailProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

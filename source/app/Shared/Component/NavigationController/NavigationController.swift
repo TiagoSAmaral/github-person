@@ -13,8 +13,12 @@ class NavigationController: UINavigationController, LoadingPresentable {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        navigationBar.isTranslucent = false
         fixBartintColoriOS15()
+        defineApperance()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     private func fixBartintColoriOS15() {
@@ -27,7 +31,13 @@ class NavigationController: UINavigationController, LoadingPresentable {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    func defineApperance() {
+        navigationBar.isTranslucent = false
+        fixBartintColoriOS15()
+        defineBackbuttonApperance()
+    }
+    
+    func defineBackbuttonApperance() {
+        navigationBar.tintColor = ColorAsset.titleColor
     }
 }

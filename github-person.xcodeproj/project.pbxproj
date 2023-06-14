@@ -57,6 +57,8 @@
 		CFAB5D2E2A13342E0091F1FF /* LoadingManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D2D2A13342E0091F1FF /* LoadingManagers.swift */; };
 		CFAB5D312A133B660091F1FF /* AlertViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D302A133B660091F1FF /* AlertViewFactory.swift */; };
 		CFAB5D332A133C410091F1FF /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D322A133C410091F1FF /* AlertPresentable.swift */; };
+		CFB6028A2A3A14080025310C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = CFB602892A3A14080025310C /* SnapshotTesting */; };
+		CFB6028D2A3A14E40025310C /* NavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6028C2A3A14E40025310C /* NavigationControllerTests.swift */; };
 		CFD3A6B723DA308A00EB6D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3A6AC23DA308900EB6D4D /* AppDelegate.swift */; };
 		CFD3A6BB23DA308A00EB6D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD3A6B423DA308A00EB6D4D /* Assets.xcassets */; };
 		CFD3A6D723DA41FE00EB6D4D /* Localizable-pt-BR.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFD3A6CF23DA3F9700EB6D4D /* Localizable-pt-BR.strings */; };
@@ -194,6 +196,7 @@
 		CFAB5D2D2A13342E0091F1FF /* LoadingManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingManagers.swift; sourceTree = "<group>"; };
 		CFAB5D302A133B660091F1FF /* AlertViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewFactory.swift; sourceTree = "<group>"; };
 		CFAB5D322A133C410091F1FF /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		CFB6028C2A3A14E40025310C /* NavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerTests.swift; sourceTree = "<group>"; };
 		CFD3A6AC23DA308900EB6D4D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD3A6B223DA308A00EB6D4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFD3A6B423DA308A00EB6D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB6028A2A3A14080025310C /* SnapshotTesting in Frameworks */,
 				CFEAE3A12A396A15006F1A96 /* Kingfisher in Frameworks */,
 				CFEAE39F2A396A15006F1A96 /* Alamofire in Frameworks */,
 			);
@@ -446,8 +450,17 @@
 		CFB602872A3A12D90025310C /* ComponentTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFB6028B2A3A14CA0025310C /* NavigationControllerTests */,
 			);
 			path = ComponentTests;
+			sourceTree = "<group>";
+		};
+		CFB6028B2A3A14CA0025310C /* NavigationControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6028C2A3A14E40025310C /* NavigationControllerTests.swift */,
+			);
+			path = NavigationControllerTests;
 			sourceTree = "<group>";
 		};
 		CFD3A6A323DA302E00EB6D4D /* source */ = {
@@ -627,6 +640,7 @@
 			packageProductDependencies = (
 				CFEAE39E2A396A15006F1A96 /* Alamofire */,
 				CFEAE3A02A396A15006F1A96 /* Kingfisher */,
+				CFB602892A3A14080025310C /* SnapshotTesting */,
 			);
 			productName = BaseProjectTargetTests;
 			productReference = CF6414DF23E4C1CF009C7A9E /* github-personTests.xctest */;
@@ -686,6 +700,7 @@
 			packageReferences = (
 				CFE2D5A32A0F4E02001F649F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CFE2D5A62A0F4E17001F649F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CFB602882A3A14080025310C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = CF9601AF23DA2A1E00916EF1 /* Products */;
 			projectDirPath = "";
@@ -755,6 +770,7 @@
 				CFEAE3AC2A396C03006F1A96 /* NavigationController.swift in Sources */,
 				CFEAE3BE2A396C03006F1A96 /* ListRepoPageCoordinator.swift in Sources */,
 				CFEAE3B12A396C03006F1A96 /* AppCoordinator.swift in Sources */,
+				CFB6028D2A3A14E40025310C /* NavigationControllerTests.swift in Sources */,
 				CFEAE3BB2A396C03006F1A96 /* ListUsersPageFactory.swift in Sources */,
 				CFEAE3D02A396C03006F1A96 /* CardUserProfileView.swift in Sources */,
 				CFEAE3A32A396C03006F1A96 /* ListUsersPageViewModel.swift in Sources */,
@@ -1135,6 +1151,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CFB602882A3A14080025310C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = exactVersion;
+				version = 1.11.0;
+			};
+		};
 		CFE2D5A32A0F4E02001F649F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1154,6 +1178,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CFB602892A3A14080025310C /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFB602882A3A14080025310C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
 		CFE2D5A42A0F4E02001F649F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CFE2D5A32A0F4E02001F649F /* XCRemoteSwiftPackageReference "Alamofire" */;

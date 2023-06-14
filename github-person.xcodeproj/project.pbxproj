@@ -121,6 +121,7 @@
 		CFEAE3D62A396C03006F1A96 /* ListUsersPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CE42A105F010091F1FF /* ListUsersPageController.swift */; };
 		CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */; };
 		CFEAE3DD2A396FCD006F1A96 /* ApiRoutesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */; };
+		CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +199,7 @@
 		CFEAE39D2A3968F3006F1A96 /* plan-unit-tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "plan-unit-tests.xctestplan"; sourceTree = "<group>"; };
 		CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeaderMakerTests.swift; sourceTree = "<group>"; };
 		CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRoutesTest.swift; sourceTree = "<group>"; };
+		CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -536,6 +538,7 @@
 			children = (
 				CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */,
 				CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */,
+				CFEAE3DE2A39745C006F1A96 /* NetworkErrorTests.swift */,
 			);
 			path = Networktests;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				CFEAE3CA2A396C03006F1A96 /* FactoryPage.swift in Sources */,
 				CFEAE3B22A396C03006F1A96 /* URLPathBuildable.swift in Sources */,
 				CFEAE3C32A396C03006F1A96 /* ColorAsset.swift in Sources */,
+				CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */,
 				CFEAE3C92A396C03006F1A96 /* ViewModelHandlerEventsControllerDelegate.swift in Sources */,
 				CFEAE3B62A396C03006F1A96 /* CardModelHandler.swift in Sources */,
 				CFEAE3A42A396C03006F1A96 /* NetworkHeaderMaker.swift in Sources */,

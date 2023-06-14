@@ -12,7 +12,6 @@
 		CF4D914B2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D914A2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift */; };
 		CF4D91502A0FFBAE000BE331 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D914F2A0FFBAE000BE331 /* Coordinator.swift */; };
 		CF4D91522A0FFC07000BE331 /* ListResposPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D91512A0FFC07000BE331 /* ListResposPageViewModel.swift */; };
-		CF6414EA23E4C210009C7A9E /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6414E923E4C210009C7A9E /* TemplateTests.swift */; };
 		CFA0234E2A38CAF10056154D /* URLPathBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0234D2A38CAF10056154D /* URLPathBuildable.swift */; };
 		CFAB5CAE2A0FFF110091F1FF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CAD2A0FFF110091F1FF /* Card.swift */; };
 		CFAB5CB02A0FFF5A0091F1FF /* NetworkConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CAF2A0FFF5A0091F1FF /* NetworkConnectable.swift */; };
@@ -121,6 +120,7 @@
 		CFEAE3D52A396C03006F1A96 /* SearchBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D152A1208D00091F1FF /* SearchBarFactory.swift */; };
 		CFEAE3D62A396C03006F1A96 /* ListUsersPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CE42A105F010091F1FF /* ListUsersPageController.swift */; };
 		CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */; };
+		CFEAE3DD2A396FCD006F1A96 /* ApiRoutesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -142,7 +142,6 @@
 		CF4D914F2A0FFBAE000BE331 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CF4D91512A0FFC07000BE331 /* ListResposPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResposPageViewModel.swift; sourceTree = "<group>"; };
 		CF6414DF23E4C1CF009C7A9E /* github-personTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "github-personTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF6414E923E4C210009C7A9E /* TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTests.swift; sourceTree = "<group>"; };
 		CF9601AE23DA2A1E00916EF1 /* github-person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-person.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0234D2A38CAF10056154D /* URLPathBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPathBuildable.swift; sourceTree = "<group>"; };
 		CFAB5CAD2A0FFF110091F1FF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -198,6 +197,7 @@
 		CFE2D5AF2A0F572C001F649F /* SwiftIconFont.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftIconFont.xcframework; path = Carthage/Build/SwiftIconFont.xcframework; sourceTree = "<group>"; };
 		CFEAE39D2A3968F3006F1A96 /* plan-unit-tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "plan-unit-tests.xctestplan"; sourceTree = "<group>"; };
 		CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeaderMakerTests.swift; sourceTree = "<group>"; };
+		CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRoutesTest.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -493,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				CFEAE3D72A396CF1006F1A96 /* apptests */,
-				CF6414E923E4C210009C7A9E /* TemplateTests.swift */,
 				CF24569923E4C55B00A1968D /* info.plist */,
 			);
 			path = test;
@@ -536,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */,
+				CFEAE3DC2A396FCD006F1A96 /* ApiRoutesTest.swift */,
 			);
 			path = Networktests;
 			sourceTree = "<group>";
@@ -736,9 +736,9 @@
 				CFEAE3A42A396C03006F1A96 /* NetworkHeaderMaker.swift in Sources */,
 				CFEAE3AE2A396C03006F1A96 /* LocalizedText.swift in Sources */,
 				CFEAE3C72A396C03006F1A96 /* RequestParams.swift in Sources */,
+				CFEAE3DD2A396FCD006F1A96 /* ApiRoutesTest.swift in Sources */,
 				CFEAE3BD2A396C03006F1A96 /* Card.swift in Sources */,
 				CFEAE3D62A396C03006F1A96 /* ListUsersPageController.swift in Sources */,
-				CF6414EA23E4C210009C7A9E /* TemplateTests.swift in Sources */,
 				CFEAE3AD2A396C03006F1A96 /* RepoListItem.swift in Sources */,
 				CFEAE3D22A396C03006F1A96 /* LayoutView.swift in Sources */,
 				CFEAE3B32A396C03006F1A96 /* Model.swift in Sources */,

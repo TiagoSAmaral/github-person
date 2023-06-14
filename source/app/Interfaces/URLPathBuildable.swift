@@ -12,5 +12,5 @@ protocol URLPathBuildable {
     func makeUrlListUsers(with params: RequestParams?) -> URL?
     func makeUrlSearch(with params: RequestParams?) -> URL?
     func makeUrlUserDetail(with params: RequestParams?) -> URL?
-    func makeUrlRepositories(with params: RequestParams?) -> URL?
+    func makeUrlListRepositories(with params: RequestParams?) -> URL?
 }

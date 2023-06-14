@@ -23,15 +23,16 @@ class ApiRoutes: URLPathBuildable {
     
     func makeUrlListUsers(with params: RequestParams?) -> URL? {
         
-        guard let params = params else {
+        guard let params = params, let since = params.since else {
             return nil
         }
         
         reset()
         
         product?.path = "/users"
+        product?.queryItems = []
         product?.queryItems?.append(contentsOf: [
-            URLQueryItem(name: "since", value: "\(params.since ?? 0)"),
+            URLQueryItem(name: "since", value: "\(since)"),
             URLQueryItem(name: "per_page", value: perPage),
         ]
         )
@@ -48,6 +49,7 @@ class ApiRoutes: URLPathBuildable {
         reset()
         
         product?.path = "/search/users"
+        product?.queryItems = []
         product?.queryItems?.append(URLQueryItem(name: "q", value: params.userName))
         
         return product?.url
@@ -57,22 +59,23 @@ class ApiRoutes: URLPathBuildable {
         
         reset()
         
-        guard let params = params else {
+        guard let params = params, let userName = params.userName  else {
             return nil
         }
-        product?.path = "/users/\(params.userName ?? "")"
+        product?.path = "/users/\(userName)"
         return product?.url
     }
 
-    func makeUrlRepositories(with params: RequestParams?) -> URL? {
+    func makeUrlListRepositories(with params: RequestParams?) -> URL? {
         
-        guard let params = params else {
+        guard let params = params, let userName = params.userName else {
             return nil
         }
         
         reset()
         
-        product?.path = "/users/\(params.userName ?? "")/repos"
+        product?.path = "/users/\(userName)/repos"
+        product?.queryItems = []
         product?.queryItems?.append(contentsOf: [
                 URLQueryItem(name: "since", value: "0"),
                 URLQueryItem(name: "per_page", value: perPage),

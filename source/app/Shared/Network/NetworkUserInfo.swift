@@ -91,7 +91,7 @@ class NetworkUserInfo: NetworkUserInfoOperation, NetworkConectable {
             return
         }
         
-        let paramsApi = buildingRequest(with: routesMarker?.makeUrlRepositories(with: params))
+        let paramsApi = buildingRequest(with: routesMarker?.makeUrlListRepositories(with: params))
         networkRequest(params: paramsApi, resultType: [RepoListemItem].self) { response in
             switch response {
             case .success(let items):

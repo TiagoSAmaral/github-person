@@ -120,6 +120,7 @@
 		CFEAE3D42A396C03006F1A96 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D322A133C410091F1FF /* AlertPresentable.swift */; };
 		CFEAE3D52A396C03006F1A96 /* SearchBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5D152A1208D00091F1FF /* SearchBarFactory.swift */; };
 		CFEAE3D62A396C03006F1A96 /* ListUsersPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CE42A105F010091F1FF /* ListUsersPageController.swift */; };
+		CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */; };
 		CFF2EA112A0F259800709168 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2EA102A0F259800709168 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +197,7 @@
 		CFD3A6DB23DA462000EB6D4D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CFE2D5AF2A0F572C001F649F /* SwiftIconFont.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftIconFont.xcframework; path = Carthage/Build/SwiftIconFont.xcframework; sourceTree = "<group>"; };
 		CFEAE39D2A3968F3006F1A96 /* plan-unit-tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "plan-unit-tests.xctestplan"; sourceTree = "<group>"; };
+		CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeaderMakerTests.swift; sourceTree = "<group>"; };
 		CFF2EA102A0F259800709168 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -490,6 +492,7 @@
 		CFD3A6BD23DA30EF00EB6D4D /* test */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAE3D72A396CF1006F1A96 /* apptests */,
 				CF6414E923E4C210009C7A9E /* TemplateTests.swift */,
 				CF24569923E4C55B00A1968D /* info.plist */,
 			);
@@ -511,6 +514,30 @@
 				CFE2D5AF2A0F572C001F649F /* SwiftIconFont.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFEAE3D72A396CF1006F1A96 /* apptests */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3D82A396CFF006F1A96 /* Shared */,
+			);
+			path = apptests;
+			sourceTree = "<group>";
+		};
+		CFEAE3D82A396CFF006F1A96 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3D92A396D16006F1A96 /* Networktests */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CFEAE3D92A396D16006F1A96 /* Networktests */ = {
+			isa = PBXGroup;
+			children = (
+				CFEAE3DA2A396D43006F1A96 /* NetworkHeaderMakerTests.swift */,
+			);
+			path = Networktests;
 			sourceTree = "<group>";
 		};
 		CFF2EA0E2A0F256D00709168 /* Extensions */ = {
@@ -720,6 +747,7 @@
 				CFEAE3BF2A396C03006F1A96 /* ListRepoPageFactory.swift in Sources */,
 				CFEAE3AF2A396C03006F1A96 /* UserDetailPageController.swift in Sources */,
 				CFEAE3CE2A396C03006F1A96 /* Identifier.swift in Sources */,
+				CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */,
 				CFEAE3C22A396C03006F1A96 /* UserDetailProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

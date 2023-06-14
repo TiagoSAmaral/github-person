@@ -28,7 +28,6 @@ class ListUsersPageCoordinator: Coordinator, ListUsersCoordinable {
             return
         }
         navigationController?.viewControllers = [controller]
-        //pushViewController(controller, animated: true)
     }
     
     func goToUserDetail(with data: Model?) {

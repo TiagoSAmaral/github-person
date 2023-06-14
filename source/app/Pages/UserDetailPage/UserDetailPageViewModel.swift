@@ -34,8 +34,11 @@ class UserDetailPageViewModel: ViewModelHandlerEventsControllerDelegate, ListDat
         guard let dataToSearch = valueToRequest as? UserDetailProfile else {
             return
         }
+        let requestParams = RequestParams()
+        requestParams.userName = dataToSearch.login
+        requestParams.layout = .userInfo
         
-        userDetailNetwork?.requestUser(with: dataToSearch.login) { result in
+        userDetailNetwork?.makeUserDetailRequest(with: requestParams) { result in
             DispatchQueue.main.async { [weak self] in
 
                 switch result {

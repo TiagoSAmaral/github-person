@@ -11,7 +11,7 @@ import Foundation
 class UserDetailPageViewModel: ViewModelHandlerEventsControllerDelegate, ListDataHandler {
     
     weak var controller: UserDetailController?
-    var userDetailNetwork: NetworkUserInfoOperation?
+    var network: NetworkUserInfoOperation?
     var coordinator: UserDetailCoordinable?
     var valueToRequest: Model?
     var items: [Model]?
@@ -22,12 +22,14 @@ class UserDetailPageViewModel: ViewModelHandlerEventsControllerDelegate, ListDat
     }
     
     func viewDidAppear() {
-        
-        guard let items = items, !items.isEmpty else {
+        if items == nil {
             controller?.startLoading()
             requestUserInfo()
-            return
         }
+    }
+    
+    func updateContent() {
+        requestUserInfo()
     }
     
     func requestUserInfo() {
@@ -38,7 +40,7 @@ class UserDetailPageViewModel: ViewModelHandlerEventsControllerDelegate, ListDat
         requestParams.userName = dataToSearch.login
         requestParams.layout = .userInfo
         
-        userDetailNetwork?.makeUserDetailRequest(with: requestParams) { result in
+        network?.makeUserDetailRequest(with: requestParams) { result in
             DispatchQueue.main.async { [weak self] in
 
                 switch result {
@@ -56,10 +58,6 @@ class UserDetailPageViewModel: ViewModelHandlerEventsControllerDelegate, ListDat
                 }
             }
         }
-    }
-    
-    func updateContent() {
-        requestUserInfo()
     }
     
     lazy var showReposWith: ((Model?) -> Void) = { [weak self] data in

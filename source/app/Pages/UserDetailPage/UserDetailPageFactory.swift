@@ -19,7 +19,7 @@ class UserDetailPageFactory: FactoryPage {
         let network = NetworkUserInfo(headerFactory: headerFactory)
         network.routesMarker = ApiRoutes()
         
-        viewModel.userDetailNetwork = network
+        viewModel.network = network
         viewModel.valueToRequest = model
         viewModel.coordinator = coordinator as? UserDetailCoordinable
         viewFactory.cardFactory = CardMaker()

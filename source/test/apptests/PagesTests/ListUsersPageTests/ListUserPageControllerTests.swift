@@ -21,7 +21,8 @@ final class ListUserPageControllerTests: XCTestCase {
     func testViewDidLoad() {
         
         sut?.viewDidLoad()
-        guard let viewFactoryFake = sut?.viewFactory as? ListViewFacotoryFake else {
+        guard let viewFactoryFake = sut?.viewFactory as? ListViewFactoryFake else {
+            XCTFail("Expect a ListViewFacotoryFake instance")
             return
         }
         XCTAssertTrue(viewFactoryFake.isDefineViewInControllerInvoked, "Expected true")
@@ -37,6 +38,7 @@ final class ListUserPageControllerTests: XCTestCase {
         
         sut?.viewDidAppear(false)
         guard let viewModelFake = sut?.viewModel as? ListUserPageViewModelFake else {
+            XCTFail("Expect a ListUserPageViewModelFake instance")
             return
         }
         XCTAssertTrue(viewModelFake.isViewDidAppearInvoked , "Expected true")
@@ -52,7 +54,8 @@ final class ListUserPageControllerTests: XCTestCase {
     
     func testUpdateView() {
         sut?.updateView()
-        guard let viewFactoryFake = sut?.viewFactory as? ListViewFacotoryFake else {
+        guard let viewFactoryFake = sut?.viewFactory as? ListViewFactoryFake else {
+            XCTFail("Expect a ListViewFacotoryFake instance")
             return
         }
         XCTAssertTrue(viewFactoryFake.isReloadViewInvoked, "Expected true")

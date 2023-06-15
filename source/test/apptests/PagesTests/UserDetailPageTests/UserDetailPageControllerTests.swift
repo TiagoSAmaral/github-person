@@ -10,51 +10,37 @@ import XCTest
 
 final class UserDetailPageControllerTests: XCTestCase {
 
-//    var sut: ListUserPageController? = ListUserPageControllerFactoryFake.make()
-//    
-//    override func setUp() {
-//        super.setUp()
-//        
-//        sut = ListUserPageControllerFactoryFake.make()
-//    }
-//    
-//    func testViewDidLoad() {
-//        
-//        sut?.viewDidLoad()
-//        guard let viewFactoryFake = sut?.viewFactory as? ListViewFacotoryFake else {
-//            return
-//        }
-//        XCTAssertTrue(viewFactoryFake.isDefineViewInControllerInvoked, "Expected true")
-//    }
-//    
-//    func testViewWillAppear() {
-//        
-//        sut?.viewWillAppear(false)
-//        XCTAssertNotNil(sut?.searchController, "Expect instance of UISearchController")
-//    }
-//    
-//    func testViewDidAppear() {
-//        
-//        sut?.viewDidAppear(false)
-//        guard let viewModelFake = sut?.viewModel as? ListUserPageViewModelFake else {
-//            return
-//        }
-//        XCTAssertTrue(viewModelFake.isViewDidAppearInvoked , "Expected true")
-//    }
-//    
-//    func testViewWillDisappear() {
-//        
-//        sut?.showSearchField()
-//        sut?.viewWillDisappear(false)
-//        let isActive = sut?.searchController?.isActive ?? true
-//        XCTAssertFalse(isActive, "Expected false")
-//    }
-//    
-//    func testUpdateView() {
-//        sut?.updateView()
-//        guard let viewFactoryFake = sut?.viewFactory as? ListViewFacotoryFake else {
-//            return
-//        }
-//        XCTAssertTrue(viewFactoryFake.isReloadViewInvoked, "Expected true")
-//    }
+    var sut: UserDetailPageController?
+    
+    override func setUp() {
+        super.setUp()
+        
+        sut = UserDetailPageControllerFactoryFake.make()
+    }
+    
+    func testViewDidAppear() {
+        
+        sut?.viewDidAppear(false)
+        guard let viewModelFake = sut?.viewModel as? UserDetailPageViewModelFake else {
+            XCTFail("Expect a ListUserPageViewModelFake instance")
+            return
+        }
+        
+        XCTAssertTrue(viewModelFake.isViewDidAppearInvoked , "Expected true")
+        
+        guard let viewFactoryFake = sut?.viewFactory as? ListViewFactoryFake else {
+            XCTFail("Expect a ListUserPageViewModelFake instance")
+            return
+        }
+        
+        XCTAssertTrue(viewFactoryFake.isDefineViewInControllerInvoked , "Expected true")
+    }
+    
+    func testUpdateView() {
+        sut?.updateView()
+        guard let viewFactoryFake = sut?.viewFactory as? ListViewFactoryFake else {
+            return
+        }
+        XCTAssertTrue(viewFactoryFake.isReloadViewInvoked, "Expected true")
+    }
 }

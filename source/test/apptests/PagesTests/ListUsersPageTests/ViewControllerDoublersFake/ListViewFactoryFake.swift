@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ListViewFacotoryFake: ListFactory {
+final class ListViewFactoryFake: ListFactory {
     
     var isReloadViewInvoked: Bool = false
     var isDefineViewInControllerInvoked: Bool = false

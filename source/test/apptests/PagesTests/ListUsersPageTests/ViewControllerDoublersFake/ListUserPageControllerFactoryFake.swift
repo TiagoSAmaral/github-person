@@ -13,7 +13,7 @@ enum ListUserPageControllerFactoryFake {
         let controller = ListUserPageController()
         
         controller.viewModel = ListUserPageViewModelFake()
-        controller.viewFactory = ListViewFacotoryFake()
+        controller.viewFactory = ListViewFactoryFake()
         controller.searchController = SearchBarFactory.makeSearch()
         return controller
     }

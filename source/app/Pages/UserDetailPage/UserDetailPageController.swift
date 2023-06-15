@@ -18,7 +18,7 @@ protocol UserDetailController where Self: UIViewController {
 class UserDetailPageController: UIViewController, UserDetailController, Controller, LoadingManagers, AlertPresetable {
     var loadingController: LoadingViewController?
     var dataHandler: ListDataHandler?
-    var viewFactory: ListFactoryView?
+    var viewFactory: ListFactory?
     var viewModel: ViewModelHandlerEventsControllerDelegate?
     var coordinator: UserDetailCoordinable?
 

@@ -12,8 +12,8 @@ enum UserDetailPageControllerFactoryFake {
     static func make() -> UserDetailPageController? {
         let controller = UserDetailPageController()
         
-//        controller.viewModel = UserDetailPageViewModelFake()
-//        controller.viewFactory = UserDetailFacotoryFake()
+        controller.viewModel = UserDetailPageViewModelFake()
+        controller.viewFactory = ListViewFactoryFake()
 
         return controller
     }

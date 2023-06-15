@@ -33,37 +33,33 @@ Suporte a Darkmode
 
 ## Sobre o projeto: <br>
 - Xcode Version 14.2 ou superior<br>
-- Suporte mínimo ao iOS 14<br>
+- Suporte mínimo ao iOS 13.6+<br>
 - Swift 5<br>
+- Cobertura de Código: 53.88%
 
-## Preparando o Ambiente
-Para executar o projeto, siga os passos abaixo.
-
-#### Ferramentas de Gestão e Qualidade de Código<br>
+### Ferramentas de Gestão e Qualidade de Código
 - Fastlane
-- Slather
+- XCov
 - Jazzy
 - Swiftlint
 
-#### Gerenciador de Dependências<br>
+### Gerenciador de Dependências
+- Swift Package Manager
 
-Gerenciadores usados: 
- - Swift Package Manager
+### Dependências:
+- [Kingfisher](https://github.com/onevcat/Kingfisher)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
 
-Dependências:
-- [Kingfisher](https://github.com/onevcat/Kingfisher). Usando SPM (Download e cache de imagens).
-- [Alamofire](https://github.com/Alamofire/Alamofire) Usando SPM (Realizaão de requisioes assincronas).
+---
+<br>
 
+## Preparando o Ambiente
 
-## Instruções para Execução de Projeto
+Para executar o projeto, siga os passos abaixo.
 
 Foi utilizado a versão do Ruby 2.7.0 no uso das ferramentas de gestão e qualidade.
 
----
-
-## Configurando o Projeto
-
-### [RVM](https://rvm.io/) e [BREW](https://brew.sh/)
+### [RVM](https://rvm.io/)
 
 Instale o RVM com o seguinte comando: <br>
 
@@ -80,6 +76,8 @@ Depois use o comando: <br>
 rvm use 2.7.0
 ```
 
+### [BREW](https://brew.sh/)
+
 Instale o brew com o seguinte comando: <br>
 
 ```
@@ -87,25 +85,31 @@ Instale o brew com o seguinte comando: <br>
 ```
 
 ---
-### Instalando dependencias de Gestão
+<br>
 
-Após instalados o RVM com a versão indicada do Ruby, e a instalação do Brew, execute os seguintes comandos
+## Instalando dependencias de Gestão
 
-```brew bundle```
+Após instalados o Brew e o RVM execute os seguintes comandos
 
-Irá instalar as dependencias listadas no arquivo `Brewfile`.
+```shell
+brew bundle
+```
 
-Após a conclusão das instalaçoes feitas com brew, execute o comando a baixo para instalar as dependencias do Gemfile:
+```shell
+bundle install
+```
 
-```bundle install```
+Irá instalar as dependencias listadas no arquivo `Brewfile` e `Gemfile` respectivamente.
 
 ---
+<br>
 
 ### Instalação de Dependências do Projeto
 
-No Xcode atualize as dependencias usando o Swift Package Manager
+Agora abra o Xcode e atualize as dependencias usando o Swift Package Manager.
 
-## Ferramentas
+---
+<br>
 
 ### Fastlane
 
@@ -130,8 +134,8 @@ Ferramenta para documentação de código
 
 Ver mais no link: [Realm/jazzy](https://github.com/realm/jazzy)
 
-### Slather
+### Xcov
 
 Ferramenta para exibir de forma mais amigável informações de cobertura de código do projeto.
 
-Ver mais no link: [Slather](https://github.com/SlatherOrg/slather)
+Ver mais no link: [Xcov](https://github.com/fastlane-community/xcov)

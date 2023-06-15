@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF246BCF2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF246BCE2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift */; };
 		CF4D91432A0FF994000BE331 /* ListRepoPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D91422A0FF994000BE331 /* ListRepoPageController.swift */; };
 		CF4D91482A0FFAEC000BE331 /* ListRepoPageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D91472A0FFAEC000BE331 /* ListRepoPageFactory.swift */; };
 		CF4D914B2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D914A2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift */; };
@@ -164,6 +165,7 @@
 
 /* Begin PBXFileReference section */
 		CF24569923E4C55B00A1968D /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		CF246BCE2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersPageFactoryTests.swift; sourceTree = "<group>"; };
 		CF4D91422A0FF994000BE331 /* ListRepoPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepoPageController.swift; sourceTree = "<group>"; };
 		CF4D91472A0FFAEC000BE331 /* ListRepoPageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepoPageFactory.swift; sourceTree = "<group>"; };
 		CF4D914A2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepoPageCoordinator.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				CFBFE5642A3A48F10039DB44 /* ViewModelDoublersFake */,
 				CFBFE5622A3A43030039DB44 /* ListUsersPageViewModelTests.swift */,
 				CF8235CF2A3B7901003A9303 /* ListUserPageControllerTests.swift */,
+				CF246BCE2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift */,
 			);
 			path = ListUsersPageTests;
 			sourceTree = "<group>";
@@ -904,6 +907,7 @@
 				CF8235D62A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift in Sources */,
 				CFEAE3BA2A396C03006F1A96 /* CardTouch.swift in Sources */,
 				CFEAE3ED2A397FA5006F1A96 /* ControllerFake.swift in Sources */,
+				CF246BCF2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift in Sources */,
 				CFEAE3B52A396C03006F1A96 /* Constraints.swift in Sources */,
 				CFEAE3AC2A396C03006F1A96 /* NavigationController.swift in Sources */,
 				CFEAE3BE2A396C03006F1A96 /* ListRepoPageCoordinator.swift in Sources */,

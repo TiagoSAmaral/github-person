@@ -103,6 +103,7 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
+SourcePackages/
 
 # CocoaPods
 #

@@ -27,12 +27,12 @@ platform :ios do
 
   desc "Create coverage report"
   lane :coverage do 
-    slather( html: true,
-            show: true,
-            output_directory: 'fastlane/codecoverage',
-            scheme: "development",
-            proj: "github-person.xcodeproj"
-            )
+    clear_derived_data
+    run_tests(scheme: "unit-tests", devices: ["iPhone 14 Pro (16.4)"])
+    slather
+# http://docs.fastlane.tools/actions/slather/#slather
+# check .slather.yml file in root folder
+
   end
 
   desc "Used by Development to keep code quality. Use command: 'fastlane check_code dev:true'"

@@ -10,18 +10,15 @@ import XCTest
 
 final class UserDetailPageFactoryTests: XCTestCase {
     
-//    func testGenerateListUserPageController() {
-//        let coordinator = ListUsersPageCoordinator(navigation: NavigationController())
-//        guard let controller = ListUsersPageFactory.makePage(coordinator: coordinator, model: nil) as? ListUserPageController else {
-//            XCTFail("Expected valid instance of ListUserPageController")
-//            return
-//        }
-//        
-//        XCTAssertNotNil(controller.viewModel)
-//        XCTAssertNotNil(controller.viewFactory)
-//        XCTAssertNotNil(controller.coordinator)
-//        XCTAssertNotNil(controller.searchController)
-//        XCTAssertNotNil(controller.searchHandlerEvents)
-//        XCTAssertNotNil(controller.dataHandler)
-//    }
+    func testGenerateListUserPageController() {
+        let coordinator = UserDetailPageCoordinator(navigation: NavigationController())
+        guard let controller = UserDetailPageFactory.makePage(coordinator: coordinator, model: nil) as? UserDetailPageController else {
+            XCTFail("Expected valid instance of ListUserPageController")
+            return
+        }
+        XCTAssertNotNil(controller.viewModel)
+        XCTAssertNotNil(controller.viewFactory)
+        XCTAssertNotNil(controller.coordinator)
+        XCTAssertNotNil(controller.dataHandler)
+    }
 }

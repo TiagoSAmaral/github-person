@@ -24,10 +24,6 @@ enum ListUserPageViewModelFactoryFake {
         viewFactory.cardFactory = CardMaker()
         coordinator.rootViewControler = controller
         controller.viewModel = viewModel
-//        controller.viewFactory = viewFactory
-//        controller.coordinator = coordinator as? ListUsersCoordinable
-//        controller.searchController = searchBarController
-//        controller.searchHandlerEvents = viewModel
         controller.dataHandler = viewModel
         return controller
     }

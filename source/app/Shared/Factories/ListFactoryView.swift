@@ -39,10 +39,9 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     }
     
     func makeTableView() {
-        guard tableView == nil else {
-            return
+        if tableView == nil {
+            tableView = UITableView(frame: .zero, style: .plain)
         }
-        tableView = UITableView(frame: .zero, style: .plain)
     }
     
     func setupTableView() {
@@ -62,7 +61,7 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: LocalizedText.with(tagName: .pullToRefreshText))
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-       tableView?.addSubview(refreshControl)
+        tableView?.addSubview(refreshControl)
         self.refreshControl = refreshControl
     }
     
@@ -71,13 +70,10 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     }
     
     func makeView() {
-        guard let controller = controller,
-              let tableView = tableView else {
-            return
+        if let controller = controller, let tableView = tableView {
+            controller.view.addSubview(tableView)
+            tableView.edgeToSuperView()
         }
-        controller.view.addSubview(tableView)
-        
-        tableView.edgeToSuperView()
     }
     
     func reloadView() {
@@ -96,14 +92,8 @@ class ListFactoryView: NSObject, ListFactory, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.classIdentifier,
-                                                       for: indexPath) as? GenericTableViewCell,
-              let model = controller?.dataHandler?.dataBy(indexPath: indexPath) else {
-            return UITableViewCell()
-        }
-        
-        let card = cardFactory?.makeCard(from: model)
+        let cell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.classIdentifier, for: indexPath) as? GenericTableViewCell ?? GenericTableViewCell()
+        let card = cardFactory?.makeCard(from: controller?.dataHandler?.dataBy(indexPath: indexPath))
         card?.defineLayout(with: cell.contentView)
         return cell
     }

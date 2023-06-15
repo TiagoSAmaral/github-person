@@ -96,4 +96,39 @@ final class ListViewTests: XCTestCase {
         
         XCTAssertFalse(refreshControl.isRefreshing)
     }
+    
+    func testNumberOfSections() {
+        var numberOfSections = sut?.numberOfSections(in: UITableView()) ?? -1
+        XCTAssertEqual(numberOfSections, 1, "Expect value 1")
+        sut?.controller = nil
+        var mustBeZeroSection = sut?.numberOfSections(in: UITableView()) ?? -1
+        XCTAssertEqual(mustBeZeroSection, 0, "Expect Zero")
+    }
+                  
+    func testNumberOfRow() {
+        guard let viewModelFake = sut?.controller?.dataHandler as? ViewModelFake else {
+            XCTFail("Expected viewModelFake")
+            return
+        }
+        viewModelFake.updateContent()
+        XCTAssertEqual(sut?.tableView(UITableView(), numberOfRowsInSection: 1) , 30, "Expect value 30")
+        sut?.controller = nil
+        XCTAssertEqual(sut?.tableView(UITableView(), numberOfRowsInSection: 1), 0, "Expect Zero")
+    }
+    
+    func testCellForRow() {
+        guard let viewModelFake = sut?.controller?.dataHandler as? ViewModelFake else {
+            XCTFail("Expected viewModelFake")
+            return
+        }
+        viewModelFake.updateContent()
+        sut?.makeTableView()
+        sut?.registerTableViewCell()
+        guard let tableView = sut?.tableView else {
+            XCTFail("Expected a valid tableView")
+            return
+        }
+        let cell = sut?.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? GenericTableViewCell
+        XCTAssertNotNil(cell)
+    }
 }

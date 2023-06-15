@@ -12,6 +12,10 @@
 		CF4D914B2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D914A2A0FFB3C000BE331 /* ListRepoPageCoordinator.swift */; };
 		CF4D91502A0FFBAE000BE331 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D914F2A0FFBAE000BE331 /* Coordinator.swift */; };
 		CF4D91522A0FFC07000BE331 /* ListResposPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4D91512A0FFC07000BE331 /* ListResposPageViewModel.swift */; };
+		CF8235D02A3B7901003A9303 /* ListUserPageControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8235CF2A3B7901003A9303 /* ListUserPageControllerTests.swift */; };
+		CF8235D62A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8235D52A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift */; };
+		CF8235D72A3B7AAA003A9303 /* ListViewFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8235D32A3B7974003A9303 /* ListViewFactoryFake.swift */; };
+		CF8235D82A3B7AAD003A9303 /* ListUserPageViewModelFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8235D12A3B794A003A9303 /* ListUserPageViewModelFake.swift */; };
 		CFA0234E2A38CAF10056154D /* URLPathBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0234D2A38CAF10056154D /* URLPathBuildable.swift */; };
 		CFAB5CAE2A0FFF110091F1FF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CAD2A0FFF110091F1FF /* Card.swift */; };
 		CFAB5CB02A0FFF5A0091F1FF /* NetworkConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB5CAF2A0FFF5A0091F1FF /* NetworkConnectable.swift */; };
@@ -166,6 +170,10 @@
 		CF4D914F2A0FFBAE000BE331 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CF4D91512A0FFC07000BE331 /* ListResposPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResposPageViewModel.swift; sourceTree = "<group>"; };
 		CF6414DF23E4C1CF009C7A9E /* github-personTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "github-personTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8235CF2A3B7901003A9303 /* ListUserPageControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserPageControllerTests.swift; sourceTree = "<group>"; };
+		CF8235D12A3B794A003A9303 /* ListUserPageViewModelFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserPageViewModelFake.swift; sourceTree = "<group>"; };
+		CF8235D32A3B7974003A9303 /* ListViewFactoryFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewFactoryFake.swift; sourceTree = "<group>"; };
+		CF8235D52A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserPageControllerFactoryFake.swift; sourceTree = "<group>"; };
 		CF9601AE23DA2A1E00916EF1 /* github-person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-person.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0234D2A38CAF10056154D /* URLPathBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPathBuildable.swift; sourceTree = "<group>"; };
 		CFAB5CAD2A0FFF110091F1FF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -314,6 +322,16 @@
 				CFAB5D0B2A11E1DB0091F1FF /* CardUserProfileView.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		CF8235CE2A3B78E6003A9303 /* ViewControllerDoublersFake */ = {
+			isa = PBXGroup;
+			children = (
+				CF8235D12A3B794A003A9303 /* ListUserPageViewModelFake.swift */,
+				CF8235D32A3B7974003A9303 /* ListViewFactoryFake.swift */,
+				CF8235D52A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift */,
+			);
+			path = ViewControllerDoublersFake;
 			sourceTree = "<group>";
 		};
 		CF9601A523DA2A1E00916EF1 = {
@@ -555,13 +573,15 @@
 		CFBFE5612A3A3FB90039DB44 /* ListUsersPageTests */ = {
 			isa = PBXGroup;
 			children = (
-				CFBFE5642A3A48F10039DB44 /* Fake */,
+				CF8235CE2A3B78E6003A9303 /* ViewControllerDoublersFake */,
+				CFBFE5642A3A48F10039DB44 /* ViewModelDoublersFake */,
 				CFBFE5622A3A43030039DB44 /* ListUsersPageViewModelTests.swift */,
+				CF8235CF2A3B7901003A9303 /* ListUserPageControllerTests.swift */,
 			);
 			path = ListUsersPageTests;
 			sourceTree = "<group>";
 		};
-		CFBFE5642A3A48F10039DB44 /* Fake */ = {
+		CFBFE5642A3A48F10039DB44 /* ViewModelDoublersFake */ = {
 			isa = PBXGroup;
 			children = (
 				CFBFE5652A3A49110039DB44 /* ListUserPageViewControllerFake.swift */,
@@ -569,7 +589,7 @@
 				CFBFE5692A3A4FC20039DB44 /* ListUserPageViewModelFactoryFake.swift */,
 				CFBFE56B2A3A50950039DB44 /* ListUserPageCoordinatorFake.swift */,
 			);
-			path = Fake;
+			path = ViewModelDoublersFake;
 			sourceTree = "<group>";
 		};
 		CFD3A6A323DA302E00EB6D4D /* source */ = {
@@ -878,8 +898,10 @@
 				CFEAE3BC2A396C03006F1A96 /* CardUserListItemView.swift in Sources */,
 				CFEAE3D52A396C03006F1A96 /* SearchBarFactory.swift in Sources */,
 				CFEAE3C02A396C03006F1A96 /* NetworkError.swift in Sources */,
+				CF8235D82A3B7AAD003A9303 /* ListUserPageViewModelFake.swift in Sources */,
 				CFEAE3D32A396C03006F1A96 /* UserDetailPageViewModel.swift in Sources */,
 				CFEAE3A22A396C03006F1A96 /* ListRepoPageController.swift in Sources */,
+				CF8235D62A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift in Sources */,
 				CFEAE3BA2A396C03006F1A96 /* CardTouch.swift in Sources */,
 				CFEAE3ED2A397FA5006F1A96 /* ControllerFake.swift in Sources */,
 				CFEAE3B52A396C03006F1A96 /* Constraints.swift in Sources */,
@@ -943,11 +965,13 @@
 				CFEAE3AB2A396C03006F1A96 /* SearchHandlerEvents.swift in Sources */,
 				CFEAE3C42A396C03006F1A96 /* ListUsersPageCoordinator.swift in Sources */,
 				CFEAE3BF2A396C03006F1A96 /* ListRepoPageFactory.swift in Sources */,
+				CF8235D72A3B7AAA003A9303 /* ListViewFactoryFake.swift in Sources */,
 				CFEAE3AF2A396C03006F1A96 /* UserDetailPageController.swift in Sources */,
 				CFEAE3CE2A396C03006F1A96 /* Identifier.swift in Sources */,
 				CFB6029D2A3A1AE80025310C /* MockContentProvider.swift in Sources */,
 				CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */,
 				CFB6029A2A3A1A2A0025310C /* CardUserProfileViewTests.swift in Sources */,
+				CF8235D02A3B7901003A9303 /* ListUserPageControllerTests.swift in Sources */,
 				CFEAE3C22A396C03006F1A96 /* UserDetailProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

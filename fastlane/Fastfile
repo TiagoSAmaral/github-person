@@ -21,7 +21,7 @@ platform :ios do
   lane :lint_code do 
     swiftlint(
       mode: :lint,
-      config_file: ".swiftlint.yml"
+      config_file: "./.swiftlint.yml"
     )
   end
 

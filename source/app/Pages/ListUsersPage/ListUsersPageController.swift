@@ -49,11 +49,10 @@ class ListUserPageController: UIViewController, ListUserController, Controller, 
     }
     
     func showSearchField() {
-        guard let searchController = searchController, navigationItem.titleView == nil else {
-            return
+        if let searchController = searchController, navigationItem.titleView == nil {
+            navigationItem.titleView = searchController.searchBar
+            navigationItem.hidesSearchBarWhenScrolling = false
+            searchController.searchBar.delegate = searchHandlerEvents
         }
-        navigationItem.titleView = searchController.searchBar
-        navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.searchBar.delegate = searchHandlerEvents
     }
 }

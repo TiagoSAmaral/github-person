@@ -2,3 +2,5 @@
 - Coordinator.swift
 - Constraints.swift
 - GenericCell.swift
+- GenericTableViewCell.swift
+- AlertPresentable.swift

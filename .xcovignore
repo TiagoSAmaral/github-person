@@ -1,0 +1,4 @@
+- AppDelegate.swift
+- Coordinator.swift
+- Constraints.swift
+- GenericCell.swift

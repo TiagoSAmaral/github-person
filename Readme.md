@@ -35,7 +35,7 @@ Suporte a Darkmode
 - Xcode Version 14.2 ou superior<br>
 - Suporte mínimo ao iOS 13.6+<br>
 - Swift 5<br>
-- Cobertura de Código: 53.88%
+- Cobertura de Código: 79.95%%
 
 ### Ferramentas de Gestão e Qualidade de Código
 - Fastlane

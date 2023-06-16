@@ -17,12 +17,13 @@ struct RepoListemItem: Codable, Model {
     let forksCount: Int?
     let htmlUrl: String?
     let language: String?
+    let owner: UserDetailProfile?
     
     var layout: LayoutView?
     var action: ((Model?) -> Void)?
     
     enum CodingKeys: String, CodingKey {
-        case name, description, language, visibility
+        case name, description, language, visibility, owner
         case identifier = "id"
         case startsCount = "stargazers_count"
         case forksCount = "forks_count"

@@ -21,10 +21,6 @@ class UserDetailPageController: UIViewController, UserDetailController, Controll
     var viewFactory: ListFactory?
     var viewModel: ViewModelHandlerEventsControllerDelegate?
     var coordinator: UserDetailCoordinable?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

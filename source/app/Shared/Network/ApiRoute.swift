@@ -77,7 +77,6 @@ class ApiRoutes: URLPathBuildable {
         product?.path = "/users/\(userName)/repos"
         product?.queryItems = []
         product?.queryItems?.append(contentsOf: [
-                URLQueryItem(name: "since", value: "0"),
                 URLQueryItem(name: "per_page", value: perPage),
             ]
         )

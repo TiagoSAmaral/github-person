@@ -48,7 +48,6 @@ class ListReposPageViewModel: NSObject, ViewModelHandlerEventsControllerDelegate
     
         let params = RequestParams()
         params.userName = login
-        params.since = 0
         params.layout = .repoListItem
     
         network?.makeListRepositoriesRequest(with: params) { result in

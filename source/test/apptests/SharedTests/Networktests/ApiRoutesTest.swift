@@ -52,7 +52,7 @@ final class ApiRoutesTest: XCTestCase {
         let param = RequestParams()
         param.since = 0
         param.userName = "TiagoAmaral"
-        let expectedFinalURL = "https://api.github.com/users/TiagoAmaral/repos?since=0&per_page=100"
+        let expectedFinalURL = "https://api.github.com/users/TiagoAmaral/repos?per_page=100"
         
         let urlTarget = sut?.makeUrlListRepositories(with: param)?.absoluteString
         

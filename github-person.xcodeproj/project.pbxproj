@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2017D42A3BB66600B22293 /* ListRepoPageViewModelFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CA2A3BB66600B22293 /* ListRepoPageViewModelFake.swift */; };
+		CF2017D52A3BB66600B22293 /* ListRepoPageControllerFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CB2A3BB66600B22293 /* ListRepoPageControllerFactoryFake.swift */; };
+		CF2017D62A3BB66600B22293 /* ListRepoFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CC2A3BB66600B22293 /* ListRepoFactoryFake.swift */; };
+		CF2017D72A3BB66600B22293 /* ListRepoPageFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CD2A3BB66600B22293 /* ListRepoPageFactoryTests.swift */; };
+		CF2017D82A3BB66600B22293 /* ListRepoPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CE2A3BB66600B22293 /* ListRepoPageViewModelTests.swift */; };
+		CF2017D92A3BB66600B22293 /* ListRepoPageControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017CF2A3BB66600B22293 /* ListRepoPageControllerTests.swift */; };
+		CF2017DA2A3BB66600B22293 /* ListRepoPageCoordinatorFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017D12A3BB66600B22293 /* ListRepoPageCoordinatorFake.swift */; };
+		CF2017DB2A3BB66600B22293 /* ListRepoPageViewModelFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017D22A3BB66600B22293 /* ListRepoPageViewModelFactoryFake.swift */; };
+		CF2017DC2A3BB66600B22293 /* ListRepoPageViewControllerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2017D32A3BB66600B22293 /* ListRepoPageViewControllerFake.swift */; };
 		CF246BCF2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF246BCE2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift */; };
 		CF246BD12A3B8A64006E97B3 /* NetworkUserInfoOperaionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF246BD02A3B8A64006E97B3 /* NetworkUserInfoOperaionFake.swift */; };
 		CF246BE02A3B8A99006E97B3 /* UserDetailPageControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF246BD52A3B8A99006E97B3 /* UserDetailPageControllerTests.swift */; };
@@ -173,6 +182,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF2017CA2A3BB66600B22293 /* ListRepoPageViewModelFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageViewModelFake.swift; sourceTree = "<group>"; };
+		CF2017CB2A3BB66600B22293 /* ListRepoPageControllerFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageControllerFactoryFake.swift; sourceTree = "<group>"; };
+		CF2017CC2A3BB66600B22293 /* ListRepoFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoFactoryFake.swift; sourceTree = "<group>"; };
+		CF2017CD2A3BB66600B22293 /* ListRepoPageFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageFactoryTests.swift; sourceTree = "<group>"; };
+		CF2017CE2A3BB66600B22293 /* ListRepoPageViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageViewModelTests.swift; sourceTree = "<group>"; };
+		CF2017CF2A3BB66600B22293 /* ListRepoPageControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageControllerTests.swift; sourceTree = "<group>"; };
+		CF2017D12A3BB66600B22293 /* ListRepoPageCoordinatorFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageCoordinatorFake.swift; sourceTree = "<group>"; };
+		CF2017D22A3BB66600B22293 /* ListRepoPageViewModelFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageViewModelFactoryFake.swift; sourceTree = "<group>"; };
+		CF2017D32A3BB66600B22293 /* ListRepoPageViewControllerFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRepoPageViewControllerFake.swift; sourceTree = "<group>"; };
 		CF24569923E4C55B00A1968D /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		CF246BCE2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersPageFactoryTests.swift; sourceTree = "<group>"; };
 		CF246BD02A3B8A64006E97B3 /* NetworkUserInfoOperaionFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUserInfoOperaionFake.swift; sourceTree = "<group>"; };
@@ -299,6 +317,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF2017C82A3BB66600B22293 /* ListReposPageTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF2017C92A3BB66600B22293 /* ViewControllerDoublersFake */,
+				CF2017CD2A3BB66600B22293 /* ListRepoPageFactoryTests.swift */,
+				CF2017CE2A3BB66600B22293 /* ListRepoPageViewModelTests.swift */,
+				CF2017CF2A3BB66600B22293 /* ListRepoPageControllerTests.swift */,
+				CF2017D02A3BB66600B22293 /* ViewModelDoublersFake */,
+			);
+			path = ListReposPageTests;
+			sourceTree = "<group>";
+		};
+		CF2017C92A3BB66600B22293 /* ViewControllerDoublersFake */ = {
+			isa = PBXGroup;
+			children = (
+				CF2017CA2A3BB66600B22293 /* ListRepoPageViewModelFake.swift */,
+				CF2017CB2A3BB66600B22293 /* ListRepoPageControllerFactoryFake.swift */,
+				CF2017CC2A3BB66600B22293 /* ListRepoFactoryFake.swift */,
+			);
+			path = ViewControllerDoublersFake;
+			sourceTree = "<group>";
+		};
+		CF2017D02A3BB66600B22293 /* ViewModelDoublersFake */ = {
+			isa = PBXGroup;
+			children = (
+				CF2017D12A3BB66600B22293 /* ListRepoPageCoordinatorFake.swift */,
+				CF2017D22A3BB66600B22293 /* ListRepoPageViewModelFactoryFake.swift */,
+				CF2017D32A3BB66600B22293 /* ListRepoPageViewControllerFake.swift */,
+			);
+			path = ViewModelDoublersFake;
+			sourceTree = "<group>";
+		};
 		CF246BD42A3B8A99006E97B3 /* UserDetailPageTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +667,7 @@
 		CFBFE5602A3A3FAA0039DB44 /* PagesTests */ = {
 			isa = PBXGroup;
 			children = (
+				CF2017C82A3BB66600B22293 /* ListReposPageTests */,
 				CF246BD42A3B8A99006E97B3 /* UserDetailPageTests */,
 				CFBFE5612A3A3FB90039DB44 /* ListUsersPageTests */,
 			);
@@ -957,8 +1008,10 @@
 				CF246BE82A3B8A99006E97B3 /* UserDetailPageViewModelFactoryFake.swift in Sources */,
 				CFEAE3A22A396C03006F1A96 /* ListRepoPageController.swift in Sources */,
 				CF246BE62A3B8A99006E97B3 /* UserDetailPageViewControllerFake.swift in Sources */,
+				CF2017D52A3BB66600B22293 /* ListRepoPageControllerFactoryFake.swift in Sources */,
 				CF8235D62A3B7AA5003A9303 /* ListUserPageControllerFactoryFake.swift in Sources */,
 				CFEAE3BA2A396C03006F1A96 /* CardTouch.swift in Sources */,
+				CF2017DB2A3BB66600B22293 /* ListRepoPageViewModelFactoryFake.swift in Sources */,
 				CF246BE22A3B8A99006E97B3 /* UserDetailPageControllerFactoryFake.swift in Sources */,
 				CFEAE3ED2A397FA5006F1A96 /* ControllerFake.swift in Sources */,
 				CF246BCF2A3B7E9B006E97B3 /* ListUsersPageFactoryTests.swift in Sources */,
@@ -966,11 +1019,13 @@
 				CFEAE3AC2A396C03006F1A96 /* NavigationController.swift in Sources */,
 				CFEAE3BE2A396C03006F1A96 /* ListRepoPageCoordinator.swift in Sources */,
 				CFEAE3B12A396C03006F1A96 /* AppCoordinator.swift in Sources */,
+				CF2017D42A3BB66600B22293 /* ListRepoPageViewModelFake.swift in Sources */,
 				CFB602902A3A17660025310C /* LoadingViewControllerTests.swift in Sources */,
 				CFB6028D2A3A14E40025310C /* NavigationControllerTests.swift in Sources */,
 				CFEAE3BB2A396C03006F1A96 /* ListUsersPageFactory.swift in Sources */,
 				CFEAE3D02A396C03006F1A96 /* CardUserProfileView.swift in Sources */,
 				CFEAE3A32A396C03006F1A96 /* ListUsersPageViewModel.swift in Sources */,
+				CF2017D92A3BB66600B22293 /* ListRepoPageControllerTests.swift in Sources */,
 				CFEAE3B42A396C03006F1A96 /* ListDataHandler.swift in Sources */,
 				CFEAE3C82A396C03006F1A96 /* CardRepoListItemView.swift in Sources */,
 				CFEAE3A62A396C03006F1A96 /* LoadingManagers.swift in Sources */,
@@ -981,6 +1036,7 @@
 				CFEAE3B72A396C03006F1A96 /* AlertViewFactory.swift in Sources */,
 				CFEAE3B82A396C03006F1A96 /* NetworkHeaderFactory.swift in Sources */,
 				CFEAE3CB2A396C03006F1A96 /* LoadingPresentable.swift in Sources */,
+				CF2017DA2A3BB66600B22293 /* ListRepoPageCoordinatorFake.swift in Sources */,
 				CFEAE3CD2A396C03006F1A96 /* NetworkConnectable.swift in Sources */,
 				CFEAE3D12A396C03006F1A96 /* GenericTableViewCell.swift in Sources */,
 				CFEAE3CF2A396C03006F1A96 /* UserDetailPageCoordinator.swift in Sources */,
@@ -1004,9 +1060,11 @@
 				CFEAE3CC2A396C03006F1A96 /* ApiRoute.swift in Sources */,
 				CFEAE3CA2A396C03006F1A96 /* FactoryPage.swift in Sources */,
 				CFEAE3B22A396C03006F1A96 /* URLPathBuildable.swift in Sources */,
+				CF2017D62A3BB66600B22293 /* ListRepoFactoryFake.swift in Sources */,
 				CFEAE3C32A396C03006F1A96 /* ColorAsset.swift in Sources */,
 				CFEAE3DF2A39745C006F1A96 /* NetworkErrorTests.swift in Sources */,
 				CF246BE12A3B8A99006E97B3 /* UserDetailFactoryFake.swift in Sources */,
+				CF2017DC2A3BB66600B22293 /* ListRepoPageViewControllerFake.swift in Sources */,
 				CFEAE3C92A396C03006F1A96 /* ViewModelHandlerEventsControllerDelegate.swift in Sources */,
 				CF246BE02A3B8A99006E97B3 /* UserDetailPageControllerTests.swift in Sources */,
 				CFEAE3B62A396C03006F1A96 /* CardModelHandler.swift in Sources */,
@@ -1029,8 +1087,10 @@
 				CFEAE3C42A396C03006F1A96 /* ListUsersPageCoordinator.swift in Sources */,
 				CFEAE3BF2A396C03006F1A96 /* ListRepoPageFactory.swift in Sources */,
 				CF246BE72A3B8A99006E97B3 /* UserDetailPageCoordinatorFake.swift in Sources */,
+				CF2017D72A3BB66600B22293 /* ListRepoPageFactoryTests.swift in Sources */,
 				CF8235D72A3B7AAA003A9303 /* ListViewFactoryFake.swift in Sources */,
 				CFEAE3AF2A396C03006F1A96 /* UserDetailPageController.swift in Sources */,
+				CF2017D82A3BB66600B22293 /* ListRepoPageViewModelTests.swift in Sources */,
 				CFEAE3CE2A396C03006F1A96 /* Identifier.swift in Sources */,
 				CFB6029D2A3A1AE80025310C /* MockContentProvider.swift in Sources */,
 				CFEAE3DB2A396D43006F1A96 /* NetworkHeaderMakerTests.swift in Sources */,
